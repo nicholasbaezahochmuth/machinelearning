@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-global plot_2d_separator
+
 def plot_2d_separator(classifier, X, fill=False, ax=None, eps=None):
     if eps is None:
         eps = X.std() / 2.
@@ -36,11 +36,11 @@ def plot_2d_separator(classifier, X, fill=False, ax=None, eps=None):
     ax.set_yticks(())
 
 
-#if __name__ == '__main__':
-#    from sklearn.datasets import make_blobs
-#    from sklearn.linear_model import LogisticRegression
-#    X, y = make_blobs(centers=2, random_state=42)
-#    clf = LogisticRegression().fit(X, y)
-#    plot_2d_separator(clf, X, fill=True)
-#    plt.scatter(X[:, 0], X[:, 1], c=y)
-#    plt.show()
+if __name__ == '__main__':
+    from sklearn.datasets import make_blobs
+    from sklearn.linear_model import LogisticRegression
+    X, y = make_blobs(centers=2, random_state=42)
+    clf = LogisticRegression().fit(X, y)
+    plot_2d_separator(clf, X, fill=True)
+    plt.scatter(X[:, 0], X[:, 1], c=y)
+    plt.show()
