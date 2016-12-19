@@ -5,9 +5,6 @@ from sklearn.datasets import make_blobs
 from sklearn.ensemble import RandomForestClassifier
 
 
-X, y = make_blobs(centers=[[0, 0], [1, 1]], random_state=61526, n_samples=50)
-
-
 def plot_forest(max_depth=1):
     plt.figure()
     ax = plt.gca()
